@@ -27,7 +27,7 @@ function checkMenuItems(string) {
     }
     if (menuItemsCount == 0){
       //Enter any symbol but ','
-      return "Please enter something edible :)!";
+      return "Please enter something 'edible' :)!";
     }
     return resultMsg;
   };
