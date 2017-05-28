@@ -1,0 +1,13 @@
+<div ng-repeat="item in list.items track by $index">
+  <div class="row">
+    <div class="col-xs-4">
+      <p>
+        {{item.name}}, {{item.short_name}}, {{item.description}}
+      </p>
+    </div>
+    <div class="col-xs-4">
+      <button ng-click="list.onRemove({index:$index});">Don't want this one!</button>
+    </div>
+  </div>
+</div>
+<div class="emptyMessage" ng-hide="list.items.length">{{list.emptyResultMessage}}</div>
