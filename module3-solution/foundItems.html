@@ -1,12 +1,12 @@
 <div ng-repeat="item in list.items track by $index">
   <div class="row">
     <div class="col-xs-4">
-      <p>
+      <p class="panel panel-default">
         {{item.name}}, {{item.short_name}}, {{item.description}}
       </p>
     </div>
     <div class="col-xs-4">
-      <button ng-click="list.onRemove({index:$index});">Don't want this one!</button>
+      <button class="btn btn-primary" ng-click="list.onRemove({index:$index});">Don't want this one!</button>
     </div>
   </div>
 </div>
