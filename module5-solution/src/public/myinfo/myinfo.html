@@ -1,0 +1,23 @@
+<fieldset style="margin-left:1%">
+    <legend>Account details</legend>
+    <span ng-hide="mySavedInfoCtrl.notDefined">
+    <span class=yellow-on-red >First name:</span> {{mySavedInfoCtrl.mySavedInfo.myInfoFN}} 
+    <br>
+    <span class=yellow-on-red >Last name:</span> {{mySavedInfoCtrl.mySavedInfo.myInfoLN}}
+    <br>
+    <span class=yellow-on-red >Email address:</span> {{mySavedInfoCtrl.mySavedInfo.myInfoEmail}}
+    <br>
+    <span class=yellow-on-red >Phone No:</span> {{mySavedInfoCtrl.mySavedInfo.myInfoPN}}
+    <br>
+    <span class=yellow-on-red >My favorite choice:</span> 
+
+      <div class=".menu-item-photo">
+        <div>{{mySavedInfoCtrl.mySavedInfo.myInfoFavChoice}}</div>
+        <img  class="img-responsive" width="250" height="150" ng-src="{{mySavedInfoCtrl.basePath}}/images/{{mySavedInfoCtrl.mySavedInfo.myInfoFavChoice}}.jpg" alt="{{mySavedInfoCtrl.mySavedInfo.myInfoFavChoice}}">
+      </div>
+
+    </span>
+            <span ng-if="mySavedInfoCtrl.notDefined">Not Signed Up Yet. 
+            <a ui-sref="public.signUp">Sign up Now! </a>
+            </span>
+</fieldset>
